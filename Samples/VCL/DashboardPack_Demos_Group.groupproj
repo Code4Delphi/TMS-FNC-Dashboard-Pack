@@ -1,0 +1,156 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B61BB4CD-5F76-4076-A128-CA6BB596F7DF}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="WidgetArrow\Arrow.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetDistributionIndicator\WidgetDistributionIndicator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetGauge\WidgetGauge.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetMarqueeProgress\WidgetMarqueeProgress.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetMultiProgress\WidgetMultiProgress.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetProgress\WidgetProgress.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetsSetPointAndLcdLabel\WidgetsSetPointAndLcdLabel.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetTrendIndicator\WidgetTrendIndicator.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetLEDBar\WidgetLEDBar.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetLEDScope\WidgetLEDScope.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="WidgetMatrixLabel\WidgetMatrixLabel.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Arrow">
+        <MSBuild Projects="WidgetArrow\Arrow.dproj"/>
+    </Target>
+    <Target Name="Arrow:Clean">
+        <MSBuild Projects="WidgetArrow\Arrow.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Arrow:Make">
+        <MSBuild Projects="WidgetArrow\Arrow.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetDistributionIndicator">
+        <MSBuild Projects="WidgetDistributionIndicator\WidgetDistributionIndicator.dproj"/>
+    </Target>
+    <Target Name="WidgetDistributionIndicator:Clean">
+        <MSBuild Projects="WidgetDistributionIndicator\WidgetDistributionIndicator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetDistributionIndicator:Make">
+        <MSBuild Projects="WidgetDistributionIndicator\WidgetDistributionIndicator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetGauge">
+        <MSBuild Projects="WidgetGauge\WidgetGauge.dproj"/>
+    </Target>
+    <Target Name="WidgetGauge:Clean">
+        <MSBuild Projects="WidgetGauge\WidgetGauge.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetGauge:Make">
+        <MSBuild Projects="WidgetGauge\WidgetGauge.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetMarqueeProgress">
+        <MSBuild Projects="WidgetMarqueeProgress\WidgetMarqueeProgress.dproj"/>
+    </Target>
+    <Target Name="WidgetMarqueeProgress:Clean">
+        <MSBuild Projects="WidgetMarqueeProgress\WidgetMarqueeProgress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetMarqueeProgress:Make">
+        <MSBuild Projects="WidgetMarqueeProgress\WidgetMarqueeProgress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetMultiProgress">
+        <MSBuild Projects="WidgetMultiProgress\WidgetMultiProgress.dproj"/>
+    </Target>
+    <Target Name="WidgetMultiProgress:Clean">
+        <MSBuild Projects="WidgetMultiProgress\WidgetMultiProgress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetMultiProgress:Make">
+        <MSBuild Projects="WidgetMultiProgress\WidgetMultiProgress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetProgress">
+        <MSBuild Projects="WidgetProgress\WidgetProgress.dproj"/>
+    </Target>
+    <Target Name="WidgetProgress:Clean">
+        <MSBuild Projects="WidgetProgress\WidgetProgress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetProgress:Make">
+        <MSBuild Projects="WidgetProgress\WidgetProgress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetsSetPointAndLcdLabel">
+        <MSBuild Projects="WidgetsSetPointAndLcdLabel\WidgetsSetPointAndLcdLabel.dproj"/>
+    </Target>
+    <Target Name="WidgetsSetPointAndLcdLabel:Clean">
+        <MSBuild Projects="WidgetsSetPointAndLcdLabel\WidgetsSetPointAndLcdLabel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetsSetPointAndLcdLabel:Make">
+        <MSBuild Projects="WidgetsSetPointAndLcdLabel\WidgetsSetPointAndLcdLabel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetTrendIndicator">
+        <MSBuild Projects="WidgetTrendIndicator\WidgetTrendIndicator.dproj"/>
+    </Target>
+    <Target Name="WidgetTrendIndicator:Clean">
+        <MSBuild Projects="WidgetTrendIndicator\WidgetTrendIndicator.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetTrendIndicator:Make">
+        <MSBuild Projects="WidgetTrendIndicator\WidgetTrendIndicator.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetLEDBar">
+        <MSBuild Projects="WidgetLEDBar\WidgetLEDBar.dproj"/>
+    </Target>
+    <Target Name="WidgetLEDBar:Clean">
+        <MSBuild Projects="WidgetLEDBar\WidgetLEDBar.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetLEDBar:Make">
+        <MSBuild Projects="WidgetLEDBar\WidgetLEDBar.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetLEDScope">
+        <MSBuild Projects="WidgetLEDScope\WidgetLEDScope.dproj"/>
+    </Target>
+    <Target Name="WidgetLEDScope:Clean">
+        <MSBuild Projects="WidgetLEDScope\WidgetLEDScope.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetLEDScope:Make">
+        <MSBuild Projects="WidgetLEDScope\WidgetLEDScope.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WidgetMatrixLabel">
+        <MSBuild Projects="WidgetMatrixLabel\WidgetMatrixLabel.dproj"/>
+    </Target>
+    <Target Name="WidgetMatrixLabel:Clean">
+        <MSBuild Projects="WidgetMatrixLabel\WidgetMatrixLabel.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WidgetMatrixLabel:Make">
+        <MSBuild Projects="WidgetMatrixLabel\WidgetMatrixLabel.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Arrow;WidgetDistributionIndicator;WidgetGauge;WidgetMarqueeProgress;WidgetMultiProgress;WidgetProgress;WidgetsSetPointAndLcdLabel;WidgetTrendIndicator;WidgetLEDBar;WidgetLEDScope;WidgetMatrixLabel"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Arrow:Clean;WidgetDistributionIndicator:Clean;WidgetGauge:Clean;WidgetMarqueeProgress:Clean;WidgetMultiProgress:Clean;WidgetProgress:Clean;WidgetsSetPointAndLcdLabel:Clean;WidgetTrendIndicator:Clean;WidgetLEDBar:Clean;WidgetLEDScope:Clean;WidgetMatrixLabel:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Arrow:Make;WidgetDistributionIndicator:Make;WidgetGauge:Make;WidgetMarqueeProgress:Make;WidgetMultiProgress:Make;WidgetProgress:Make;WidgetsSetPointAndLcdLabel:Make;WidgetTrendIndicator:Make;WidgetLEDBar:Make;WidgetLEDScope:Make;WidgetMatrixLabel:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

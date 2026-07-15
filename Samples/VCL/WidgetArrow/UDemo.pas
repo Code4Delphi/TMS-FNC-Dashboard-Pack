@@ -1,0 +1,104 @@
+unit UDemo;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, VCL.TMSFNCTypes, VCL.TMSFNCUtils,
+  VCL.TMSFNCGraphics, VCL.TMSFNCGraphicsTypes, VCL.TMSFNCCustomControl,
+  VCL.TMSFNCWidgetProgress, Vcl.StdCtrls, Vcl.ExtCtrls,
+  VCL.TMSFNCWidgetMarqueeProgress, VCL.TMSFNCWidgetArrow;
+
+type
+  TForm1 = class(TForm)
+    Panel1: TPanel;
+    Button1: TButton;
+    Label1: TLabel;
+    TMSFNCWidgetArrow1: TTMSFNCWidgetArrow;
+    TMSFNCWidgetProgress1: TTMSFNCWidgetProgress;
+    btnAuto: TButton;
+    Timer1: TTimer;
+    procedure FormCreate(Sender: TObject);
+    procedure Button1Click(Sender: TObject);
+    procedure btnAutoClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+  private
+    function UpdateProgress(AProgress: Single): Single;
+    procedure UpdateAll;
+  public
+
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+function GetArrowValue(APosition: Single): Single;
+begin
+  result := -90 + (APosition / 100.0) * 180;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  TMSFNCWidgetProgress1.Value := 0;
+  TMSFNCWidgetProgress1.CaptionOptions.Text := 'Server Dallas';
+
+  TMSFNCWidgetArrow1.ArrowOptions.Margin := 10;
+  TMSFNCWidgetArrow1.ArrowOptions.Width := 30;
+  TMSFNCWidgetArrow1.ArrowOptions.HeadWidth := 60;
+  TMSFNCWidgetArrow1.ArrowOptions.HeadLength := 60;
+  TMSFNCWidgetArrow1.CaptionOptions.Text := 'Overall Progress';
+  TMSFNCWidgetArrow1.ValueText := '';
+  TMSFNCWidgetArrow1.Value := Round(GetArrowValue(TMSFNCWidgetProgress1.Value));
+end;
+
+function TForm1.UpdateProgress(AProgress: Single): Single;
+var
+  AIncr: Single;
+begin
+  result := AProgress;
+  if AProgress >= 100 then
+    exit;
+  AIncr := 0;
+  while AIncr = 0 do
+    AIncr := Random(12);
+  AProgress := AProgress + AIncr;
+  if AProgress >= 100 then
+    AProgress := 100;
+  result := AProgress;
+end;
+
+procedure TForm1.UpdateAll;
+begin
+  if (TMSFNCWidgetProgress1.Value < 100) then
+  begin
+    TMSFNCWidgetProgress1.Value := UpdateProgress(TMSFNCWidgetProgress1.Value);
+    TMSFNCWidgetArrow1.Value := Round(GetArrowValue(TMSFNCWidgetProgress1.Value));
+  end;
+
+  if (TMSFNCWidgetProgress1.Value = 100) then
+  begin
+    Label1.Caption := 'Server Backup Completed';
+    Timer1.Enabled := False;
+  end;
+end;
+
+procedure TForm1.btnAutoClick(Sender: TObject);
+begin
+  Timer1.Enabled := True;
+end;
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+  UpdateAll;
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  UpdateAll;
+end;
+
+end.
