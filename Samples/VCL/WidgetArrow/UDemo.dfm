@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Arrow Demo'
   ClientHeight = 352
   ClientWidth = 595
@@ -157,7 +156,6 @@ object Form1: TForm1
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -1
     object Label1: TLabel
       Left = 200
       Top = 12
@@ -191,7 +189,7 @@ object Form1: TForm1
     end
   end
   object TMSFNCWidgetArrow1: TTMSFNCWidgetArrow
-    Left = 299
+    Left = 303
     Top = 55
     Width = 295
     Height = 295

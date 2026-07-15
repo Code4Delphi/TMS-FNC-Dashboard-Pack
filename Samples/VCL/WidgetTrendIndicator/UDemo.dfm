@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Trend Indicator Demo'
   ClientHeight = 371
   ClientWidth = 595

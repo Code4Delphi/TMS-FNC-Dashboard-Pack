@@ -72,6 +72,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>WidgetDistributionIndicator</SanitizedProjectName>
+        <Custom_Styles>&quot;Windows10 Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows10Dark.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>rtl;fmxase;tmsexdXE10starter;vcl;CustomIPTransport;vclactnband;vcldsnap;IndyCore;IndySystem;FMXTMSFNCCustPkgDXE10;VCLTMSFNCUIPackPkgDXE11;vclx;bindcomp;tethering;svnui;appanalytics;dsnap;tmswizdXE10starter;VCLTMSFNCCustPkgDXE11;FMXTMSFNCCorePkgDXE11;tmsdXE10starter;bindcompvcl;vclimg;VCLTMSFNCCorePkgDXE11;FMXTMSFNCUIPackPkgDXE11;vcltouch;VclSmp;vcldb;bindcompfmx;svn;tmsxlsdXE10starter;vclie;bindengine;dbrtl;IndyProtocols;fmx;fmxdae;FMXTMSFNCCustPkgDXE11;xmlrtl;fmxobj;vclwinx;$(DCC_UsePackage)</DCC_UsePackage>
@@ -117,7 +118,6 @@
         <DCC_DebugInformation>0</DCC_DebugInformation>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
-        <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <BT_BuildType>Debug</BT_BuildType>
@@ -155,6 +155,10 @@
                 <Source>
                     <Source Name="MainSource">WidgetDistributionIndicator.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k290.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp290.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
                 <Platform value="Win32">True</Platform>

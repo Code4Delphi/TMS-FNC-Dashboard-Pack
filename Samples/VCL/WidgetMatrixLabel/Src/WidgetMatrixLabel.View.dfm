@@ -2,7 +2,7 @@ object WidgetMatrixLabelView: TWidgetMatrixLabelView
   Left = 0
   Top = 0
   Caption = 'TMS FNC Widget Matrix Label View Demo'
-  ClientHeight = 441
+  ClientHeight = 470
   ClientWidth = 595
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,19 +17,20 @@ object WidgetMatrixLabelView: TWidgetMatrixLabelView
     Left = 0
     Top = 0
     Width = 595
-    Height = 441
+    Height = 470
     Align = alClient
     BevelOuter = bvNone
     ParentBackground = False
     TabOrder = 0
+    ExplicitHeight = 441
     object TMSFNCWidgetMatrixLabel1: TTMSFNCWidgetMatrixLabel
       Left = 24
-      Top = 200
+      Top = 208
       Width = 536
       Height = 30
       ParentDoubleBuffered = False
       Color = clBlack
-      DoubleBuffered = False
+      DoubleBuffered = True
       TabOrder = 0
       Fill.Color = clBlack
       Stroke.Kind = gskNone
@@ -40,13 +41,13 @@ object WidgetMatrixLabelView: TWidgetMatrixLabelView
     end
     object Panel2: TPanel
       Left = 0
-      Top = 400
+      Top = 429
       Width = 595
       Height = 41
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 1
-      ExplicitTop = 495
+      ExplicitTop = 400
       object btnScrollAuto: TButton
         AlignWithMargins = True
         Left = 3
@@ -57,9 +58,6 @@ object WidgetMatrixLabelView: TWidgetMatrixLabelView
         Caption = 'Scroll Auto'
         TabOrder = 0
         OnClick = btnScrollAutoClick
-        ExplicitLeft = 4
-        ExplicitTop = 4
-        ExplicitHeight = 33
       end
     end
   end

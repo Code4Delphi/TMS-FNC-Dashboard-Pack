@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Progress Demo'
   ClientHeight = 333
   ClientWidth = 595
@@ -183,7 +182,6 @@ object Form1: TForm1
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 514
     object Label1: TLabel
       Left = 192
       Top = 16
@@ -214,7 +212,7 @@ object Form1: TForm1
     Height = 250
     ParentDoubleBuffered = False
     DoubleBuffered = True
-    TabOrder = 2
+    TabOrder = 1
     CircleOptions.Fill.Orientation = gfoVertical
     CircleOptions.Fill.TextureMode = gtmStretch
     CircleOptions.UnfinishedFill.Orientation = gfoVertical

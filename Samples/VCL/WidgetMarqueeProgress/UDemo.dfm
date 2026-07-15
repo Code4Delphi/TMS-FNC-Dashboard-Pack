@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Continuous Progress Demo'
   ClientHeight = 357
   ClientWidth = 595
@@ -157,7 +156,6 @@ object Form1: TForm1
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitWidth = 611
     object Label1: TLabel
       Left = 16
       Top = 16

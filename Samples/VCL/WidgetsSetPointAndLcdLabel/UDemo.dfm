@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Setpoint Demo'
   ClientHeight = 411
   ClientWidth = 595
@@ -166,7 +165,6 @@ object Form1: TForm1
     Height = 305
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 634
     object TMSFNCWidgetGauge1: TTMSFNCWidgetGauge
       Left = 0
       Top = 0
@@ -277,7 +275,6 @@ object Form1: TForm1
     TabOrder = 1
     TabStop = False
     OnChange = TrackBar1Change
-    ExplicitTop = 338
   end
   object Edit1: TEdit
     Left = 147

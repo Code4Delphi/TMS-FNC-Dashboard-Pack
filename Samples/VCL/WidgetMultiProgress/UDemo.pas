@@ -14,8 +14,14 @@ type
     Panel1: TPanel;
     Button1: TButton;
     TMSFNCWidgetMultiProgress1: TTMSFNCWidgetMultiProgress;
+    Timer1: TTimer;
+    Button2: TButton;
+    Button3: TButton;
     procedure FormCreate(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
   private
     function UpdateProgress(AProgress: Single): Single;
     procedure UpdateAll;
@@ -29,6 +35,22 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  Button3.Click;
+  Timer1.Enabled := True;
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+var
+  I: Integer;
+begin
+  Timer1.Enabled := False;
+
+  for I := 0 to 3 do
+     TMSFNCWidgetMultiProgress1.CircleItems.Items[I].Value := I;
+end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var
@@ -51,6 +73,11 @@ begin
   AnItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
   AnItem.Caption := 'West';
   AnItem.Value := Random(12);
+end;
+
+procedure TForm1.Timer1Timer(Sender: TObject);
+begin
+  UpdateAll;
 end;
 
 function TForm1.UpdateProgress(AProgress: Single): Single;

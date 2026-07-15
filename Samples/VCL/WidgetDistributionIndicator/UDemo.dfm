@@ -4,7 +4,7 @@ object Form1: TForm1
   Caption = 'TMS FNC Widget Distribution Indicator Demo'
   ClientHeight = 453
   ClientWidth = 595
-  Color = clBtnFace
+  Color = 1511693
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -13
@@ -167,30 +167,34 @@ object Form1: TForm1
     Height = 352
     Align = alTop
     Anchors = [akLeft, akTop, akRight, akBottom]
+    BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 685
     object TMSFNCWidgetDistributionIndicator1: TTMSFNCWidgetDistributionIndicator
-      Left = 1
-      Top = 1
-      Width = 593
-      Height = 350
+      Left = 0
+      Top = 0
+      Width = 595
+      Height = 352
       Align = alClient
+      BevelInner = bvNone
+      BevelOuter = bvNone
       ParentDoubleBuffered = False
+      Color = 1511693
       DoubleBuffered = True
       Font.Charset = ANSI_CHARSET
-      Font.Color = clWindowText
+      Font.Color = clWhite
       Font.Height = -13
       Font.Name = 'Segoe UI'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      Border.Color = clDimgray
-      Border.Width = 1.000000000000000000
+      Fill.Color = 1511693
+      Border.Kind = gskNone
+      Border.Color = 1511693
       DonutThickness = 0.250000000000000000
       BarWidth = 0.300000011920929000
       BarLength = 0.899999976158142100
       ValueFont.Charset = ANSI_CHARSET
-      ValueFont.Color = clDarkslategray
+      ValueFont.Color = clSkyBlue
       ValueFont.Height = -16
       ValueFont.Name = 'Segoe UI'
       ValueFont.Style = []
@@ -254,17 +258,17 @@ object Form1: TForm1
         end>
       Header.Text = 'Sales by Countries'
       Header.Font.Charset = ANSI_CHARSET
-      Header.Font.Color = clGray
+      Header.Font.Color = clWhite
       Header.Font.Height = -19
       Header.Font.Name = 'Segoe UI'
       Header.Font.Style = []
       Footer.Font.Charset = ANSI_CHARSET
-      Footer.Font.Color = clGray
+      Footer.Font.Color = clWhite
       Footer.Font.Height = -19
       Footer.Font.Name = 'Segoe UI'
       Footer.Font.Style = []
       Legend.Font.Charset = ANSI_CHARSET
-      Legend.Font.Color = clGray
+      Legend.Font.Color = clWhite
       Legend.Font.Height = -16
       Legend.Font.Name = 'Segoe UI'
       Legend.Font.Style = []
@@ -272,7 +276,7 @@ object Form1: TForm1
       Funnel.WidthTop = 0.600000023841857900
       Funnel.WidthBottom = 0.330000013113021900
       Funnel.Gap = 0.019999999552965160
-      ExplicitWidth = 683
+      ExplicitLeft = -1
     end
   end
   object ComboBox1: TComboBox

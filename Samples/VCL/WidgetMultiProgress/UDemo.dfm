@@ -1,7 +1,6 @@
 object Form1: TForm1
   Left = 0
   Top = 0
-  BorderStyle = bsSingle
   Caption = 'TMS FNC Widget Multi Progress Demo'
   ClientHeight = 469
   ClientWidth = 595
@@ -156,15 +155,38 @@ object Form1: TForm1
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitWidth = 734
+    ExplicitTop = -6
+    DesignSize = (
+      595
+      49)
     object Button1: TButton
-      Left = 24
+      Left = 16
       Top = 13
-      Width = 137
+      Width = 100
       Height = 25
       Caption = 'Update Status'
       TabOrder = 0
       OnClick = Button1Click
+    end
+    object Button2: TButton
+      Left = 376
+      Top = 13
+      Width = 100
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Auto Update'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      Left = 477
+      Top = 13
+      Width = 100
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = 'Clear'
+      TabOrder = 2
+      OnClick = Button3Click
     end
   end
   object TMSFNCWidgetMultiProgress1: TTMSFNCWidgetMultiProgress
@@ -225,6 +247,12 @@ object Form1: TForm1
     ValueFont.Name = 'Arial Narrow'
     ValueFont.Style = [fsBold]
     ValueFormat = '%g%%'
-    ExplicitWidth = 734
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 250
+    OnTimer = Timer1Timer
+    Left = 320
+    Top = 64
   end
 end
