@@ -24,6 +24,9 @@ Este repositório reúne exemplos práticos de utilização dos componentes do T
 <img width="524" height="124" alt="VCL-FMX-Web-FNC" src="https://github.com/user-attachments/assets/17b23899-0e26-4901-810e-f9a03e38deae" />
 
 ## Screenshots
+<img width="928" height="403" alt="Dunnet-pIE" src="https://github.com/user-attachments/assets/8493ea69-b03b-40fc-a04b-8415953c215d" />
+
+
 <img width="934" height="630" alt="image" src="https://github.com/user-attachments/assets/a31923c8-0563-42bf-9fe7-99495079c961" />
 
 
