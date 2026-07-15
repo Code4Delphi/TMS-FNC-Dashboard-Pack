@@ -46,6 +46,11 @@ Este repositório reúne exemplos práticos de utilização dos componentes do T
 
 <img width="934" height="503" alt="gauge" src="https://github.com/user-attachments/assets/4b655ccd-326b-4893-b010-93644bbff9e1" />
 
+<br> <br>
+
+<img width="933" height="530" alt="Dashboard-indication-Proples" src="https://github.com/user-attachments/assets/40c115f7-2c57-4083-b77a-a66e133fb7d5" />
+
+
 <br>
 
 ## 📞 Contatos
