@@ -26,16 +26,17 @@ Este repositório reúne exemplos práticos de utilização dos componentes do T
 ## Screenshots
 <img width="928" height="403" alt="Dunnet-pIE" src="https://github.com/user-attachments/assets/8493ea69-b03b-40fc-a04b-8415953c215d" />
 
-<br/>
-<br/>
+<br/> <br/>
 
 <img width="928" height="603" alt="Dashboard-Bar-Vertical-Funnel" src="https://github.com/user-attachments/assets/a09d4844-be6e-4e8b-9e45-8f9cbff95a33" />
 
 <br/>
-<br/>
+
+<img width="928" height="270" alt="Dashboard-Bar-horizontal" src="https://github.com/user-attachments/assets/2d67d3d5-33df-4a6e-bfa3-c52aa5e7d001" />
+
+<br/> <br/>
 
 <img width="934" height="630" alt="image" src="https://github.com/user-attachments/assets/a31923c8-0563-42bf-9fe7-99495079c961" />
-
 
 ## 📞 Contatos
 [![Telegram](https://img.shields.io/badge/Telegram-Join-blue?logo=telegram)](https://t.me/Code4Delphi)
