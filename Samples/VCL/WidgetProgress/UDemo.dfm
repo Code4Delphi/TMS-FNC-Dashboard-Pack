@@ -206,7 +206,7 @@ object Form1: TForm1
     end
   end
   object TMSFNCWidgetProgress1: TTMSFNCWidgetProgress
-    Left = 0
+    Left = -5
     Top = 55
     Width = 297
     Height = 250
