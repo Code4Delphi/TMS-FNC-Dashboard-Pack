@@ -199,7 +199,7 @@ object Form1: TForm1
     ValueFormat = '%g%%'
   end
   object TMSFNCWidgetMarqueeContinuousProgress1: TTMSFNCWidgetMarqueeContinuousProgress
-    Left = 0
+    Left = -4
     Top = 55
     Width = 294
     Height = 300
