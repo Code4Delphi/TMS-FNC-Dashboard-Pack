@@ -2,7 +2,7 @@ object ProgressView: TProgressView
   Left = 0
   Top = 0
   Caption = 'TMS FNC Dashboard Pack - Progress'
-  ClientHeight = 685
+  ClientHeight = 687
   ClientWidth = 595
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -17,7 +17,7 @@ object ProgressView: TProgressView
     Left = 0
     Top = 0
     Width = 595
-    Height = 685
+    Height = 687
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 0
@@ -25,11 +25,37 @@ object ProgressView: TProgressView
     ExplicitTop = 344
     ExplicitWidth = 185
     ExplicitHeight = 41
+    object Panel2: TPanel
+      Left = 0
+      Top = 0
+      Width = 595
+      Height = 40
+      Align = alTop
+      BevelOuter = bvNone
+      Padding.Left = 8
+      Padding.Top = 5
+      Padding.Right = 5
+      Padding.Bottom = 5
+      TabOrder = 2
+      object btnIncrement: TButton
+        Left = 8
+        Top = 5
+        Width = 99
+        Height = 30
+        Align = alLeft
+        Caption = 'Increment'
+        TabOrder = 0
+        OnClick = btnIncrementClick
+        ExplicitLeft = 6
+        ExplicitTop = 6
+        ExplicitHeight = 29
+      end
+    end
     object TMSFNCWidgetProgress1: TTMSFNCWidgetProgress
       Left = 8
-      Top = 64
-      Width = 305
-      Height = 249
+      Top = 40
+      Width = 587
+      Height = 242
       ParentDoubleBuffered = False
       DoubleBuffered = True
       TabOrder = 0
@@ -63,8 +89,8 @@ object ProgressView: TProgressView
       ValueFormat = '%.0f%%'
     end
     object TMSFNCBitmapContainer1: TTMSFNCBitmapContainer
-      Left = 464
-      Top = 232
+      Left = 480
+      Top = 47
       Width = 26
       Height = 26
       Visible = True
@@ -1813,27 +1839,112 @@ object ProgressView: TProgressView
           Tag = 0
         end>
     end
-    object Panel2: TPanel
+    object TMSFNCWidgetMarqueeProgress1: TTMSFNCWidgetMarqueeProgress
+      Left = 8
+      Top = 292
+      Width = 281
+      Height = 354
+      ParentDoubleBuffered = False
+      DoubleBuffered = True
+      TabOrder = 3
+      CircleOptions.Margin = 30
+      CircleOptions.Fill.Orientation = gfoVertical
+      CircleOptions.Fill.TextureMode = gtmStretch
+      CircleOptions.UnfinishedFill.Orientation = gfoVertical
+      CircleOptions.UnfinishedFill.Color = clWhite
+      CircleOptions.UnfinishedFill.TextureMode = gtmStretch
+      Border.Color = clDimgray
+      Border.Width = 1.000000000000000000
+      CaptionOptions.Font.Charset = DEFAULT_CHARSET
+      CaptionOptions.Font.Color = clGray
+      CaptionOptions.Font.Height = -19
+      CaptionOptions.Font.Name = 'Segoe UI'
+      CaptionOptions.Font.Style = []
+      Value = 30.000000000000000000
+      ValueFont.Charset = DEFAULT_CHARSET
+      ValueFont.Color = clGray
+      ValueFont.Height = -33
+      ValueFont.Name = 'Arial'
+      ValueFont.Style = []
+      ValueFormat = '%.0f%%'
+    end
+    object TMSFNCWidgetMarqueeContinuousProgress1: TTMSFNCWidgetMarqueeContinuousProgress
+      Left = 295
+      Top = 292
+      Width = 300
+      Height = 354
+      ParentDoubleBuffered = False
+      DoubleBuffered = True
+      TabOrder = 4
+      CircleOptions.Margin = 30
+      CircleOptions.Fill.Orientation = gfoVertical
+      CircleOptions.Fill.Color = clPowderblue
+      CircleOptions.Fill.TextureMode = gtmStretch
+      CircleOptions.UnfinishedFill.Orientation = gfoVertical
+      CircleOptions.UnfinishedFill.Color = clWhite
+      CircleOptions.UnfinishedFill.TextureMode = gtmStretch
+      MarqueeAnimation.Interval = 50
+      MarqueeAnimation.Fill.Orientation = gfoVertical
+      MarqueeAnimation.Fill.TextureMode = gtmStretch
+      MarqueeAnimation.SideFill.Orientation = gfoVertical
+      MarqueeAnimation.SideFill.TextureMode = gtmStretch
+      CenterText = 'Processing...'
+      CenterTextFont.Charset = DEFAULT_CHARSET
+      CenterTextFont.Color = clGray
+      CenterTextFont.Height = -27
+      CenterTextFont.Name = 'Arial'
+      CenterTextFont.Style = []
+      Border.Color = clDimgray
+      Border.Width = 1.000000000000000000
+      CaptionOptions.Font.Charset = DEFAULT_CHARSET
+      CaptionOptions.Font.Color = clGray
+      CaptionOptions.Font.Height = -19
+      CaptionOptions.Font.Name = 'Segoe UI'
+      CaptionOptions.Font.Style = []
+    end
+    object Panel3: TPanel
       Left = 0
-      Top = 0
+      Top = 646
       Width = 595
       Height = 41
-      Align = alTop
-      Padding.Left = 5
+      Align = alBottom
+      BevelOuter = bvNone
+      Padding.Left = 8
       Padding.Top = 5
       Padding.Right = 5
       Padding.Bottom = 5
-      TabOrder = 2
-      object btnIncrement: TButton
-        Left = 6
-        Top = 6
+      TabOrder = 5
+      ExplicitTop = 8
+      object btnActiveMarqueeProgress: TButton
+        Left = 8
+        Top = 5
         Width = 99
-        Height = 29
+        Height = 31
         Align = alLeft
-        Caption = 'Increment'
+        Caption = 'Active'
         TabOrder = 0
-        OnClick = btnIncrementClick
+        OnClick = btnActiveMarqueeProgressClick
+        ExplicitTop = 6
+      end
+      object btnActiveMarqueeContinuousProgress: TButton
+        Left = 491
+        Top = 5
+        Width = 99
+        Height = 31
+        Align = alRight
+        Caption = 'Active'
+        TabOrder = 1
+        OnClick = btnActiveMarqueeContinuousProgressClick
+        ExplicitLeft = 16
+        ExplicitTop = 10
       end
     end
+  end
+  object Timer1: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Timer1Timer
+    Left = 208
+    Top = 527
   end
 end

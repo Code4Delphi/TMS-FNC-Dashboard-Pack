@@ -29,8 +29,17 @@ type
     TMSFNCBitmapContainer1: TTMSFNCBitmapContainer;
     Panel2: TPanel;
     btnIncrement: TButton;
+    TMSFNCWidgetMarqueeProgress1: TTMSFNCWidgetMarqueeProgress;
+    TMSFNCWidgetMarqueeContinuousProgress1: TTMSFNCWidgetMarqueeContinuousProgress;
+    Panel3: TPanel;
+    btnActiveMarqueeProgress: TButton;
+    btnActiveMarqueeContinuousProgress: TButton;
+    Timer1: TTimer;
     procedure FormCreate(Sender: TObject);
     procedure btnIncrementClick(Sender: TObject);
+    procedure btnActiveMarqueeProgressClick(Sender: TObject);
+    procedure btnActiveMarqueeContinuousProgressClick(Sender: TObject);
+    procedure Timer1Timer(Sender: TObject);
   private
 
   public
@@ -66,6 +75,25 @@ begin
 
   if TMSFNCWidgetProgress1.Value < 100 then
     TMSFNCWidgetProgress1.Value := TMSFNCWidgetProgress1.Value + 20;
+end;
+
+procedure TProgressView.btnActiveMarqueeProgressClick(Sender: TObject);
+begin
+  TMSFNCWidgetMarqueeProgress1.Value := TMSFNCWidgetMarqueeProgress1.Value + 10;
+  TMSFNCWidgetMarqueeProgress1.MarqueeAnimation.Active := True;
+
+  Timer1.Enabled := True;
+end;
+
+procedure TProgressView.Timer1Timer(Sender: TObject);
+begin
+  if TMSFNCWidgetMarqueeProgress1.Value < 100 then
+    TMSFNCWidgetMarqueeProgress1.Value := TMSFNCWidgetMarqueeProgress1.Value + 10;
+end;
+
+procedure TProgressView.btnActiveMarqueeContinuousProgressClick(Sender: TObject);
+begin
+  TMSFNCWidgetMarqueeContinuousProgress1.MarqueeAnimation.Active := not TMSFNCWidgetMarqueeContinuousProgress1.MarqueeAnimation.Active;
 end;
 
 end.
