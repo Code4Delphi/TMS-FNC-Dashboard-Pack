@@ -17,6 +17,7 @@ Este repositório reúne exemplos práticos de utilização dos componentes do T
 
 ## Vídeos de demonstração
 - [Dashboards no Delphi: overview do TMS FNC Dashboard Pack | #Short #015](https://youtube.com/shorts/m4kYmMwOEyo?si=9UTf29Wfof73NFP7)
+- [Indicadores de Progresso no Delphi | Dashboards | #Short #016](https://youtube.com/shorts/x0WD8cVS8Kw)
 
 <br>
 
