@@ -110,8 +110,6 @@ object DistributionIndicatorView: TDistributionIndicatorView
     Funnel.WidthTop = 0.600000023841857900
     Funnel.WidthBottom = 0.330000013113021900
     Funnel.Gap = 0.019999999552965160
-    ExplicitLeft = 8
-    ExplicitTop = 36
   end
   object Panel1: TPanel
     Left = 0
@@ -184,7 +182,6 @@ object DistributionIndicatorView: TDistributionIndicatorView
       Items.Strings = (
         'Show Percentages'
         'Show Absolute Values')
-      ExplicitLeft = 386
     end
   end
   object FDConnection1: TFDConnection
@@ -196,7 +193,6 @@ object DistributionIndicatorView: TDistributionIndicatorView
     FetchOptions.AssignedValues = [evMode, evCursorKind]
     FetchOptions.Mode = fmAll
     FetchOptions.CursorKind = ckForwardOnly
-    Connected = True
     LoginPrompt = False
     Left = 512
     Top = 54
