@@ -155,7 +155,6 @@ object Form1: TForm1
     Height = 49
     Align = alTop
     TabOrder = 0
-    ExplicitTop = -6
     DesignSize = (
       595
       49)

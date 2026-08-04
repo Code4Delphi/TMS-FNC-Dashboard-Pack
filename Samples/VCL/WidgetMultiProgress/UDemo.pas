@@ -26,7 +26,7 @@ type
     function UpdateProgress(AProgress: Single): Single;
     procedure UpdateAll;
   public
-    { Public declarations }
+
   end;
 
 var
@@ -54,49 +54,48 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 var
-  AnItem: TTMSFNCCircleItem;
+  LCircleItem: TTMSFNCCircleItem;
 begin
-  TMSFNCWidgetMultiProgress1.CaptionOptions.Text :=
-     'Sales of Beverages';
+  TMSFNCWidgetMultiProgress1.CaptionOptions.Text := 'Sales of Beverages';
   TMSFNCWidgetMultiProgress1.Legend.Position := lpTopRight;
   TMSFNCWidgetMultiProgress1.CaptionOptions.Position := cpTop;
   TMSFNCWidgetMultiProgress1.CircleItems.Clear;
-  AnItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
-  AnItem.Caption := 'North';
-  AnItem.Value := Random(12);
-  AnItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
-  AnItem.Caption := 'South';
-  AnItem.Value := Random(12);
-  AnItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
-  AnItem.Caption := 'East';
-  AnItem.Value := Random(12);
-  AnItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
-  AnItem.Caption := 'West';
-  AnItem.Value := Random(12);
+  LCircleItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
+  LCircleItem.Caption := 'North';
+  LCircleItem.Value := Random(12);
+  LCircleItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
+  LCircleItem.Caption := 'South';
+  LCircleItem.Value := Random(12);
+  LCircleItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
+  LCircleItem.Caption := 'East';
+  LCircleItem.Value := Random(12);
+  LCircleItem := TMSFNCWidgetMultiProgress1.CircleItems.Add;
+  LCircleItem.Caption := 'West';
+  LCircleItem.Value := Random(12);
 end;
 
 procedure TForm1.Timer1Timer(Sender: TObject);
 begin
-  UpdateAll;
+  Self.UpdateAll;
 end;
 
 function TForm1.UpdateProgress(AProgress: Single): Single;
 var
-  AIncr: Single;
+  LInc: Single;
 begin
-  result := AProgress;
+  Result := AProgress;
   if AProgress >= 100 then
     Exit;
 
-  AIncr := 0;
-  while AIncr = 0 do
-    AIncr := Random(12);
+  LInc := 0;
+  while LInc = 0 do
+    LInc := Random(12);
 
-  AProgress := AProgress + AIncr;
+  AProgress := AProgress + LInc;
   if AProgress >= 100 then
     AProgress := 100;
 
-  result := AProgress;
+  Result := AProgress;
 end;
 
 procedure TForm1.UpdateAll;
@@ -104,13 +103,13 @@ var
   I: Integer;
 begin
   for I := 0 to 3 do
-    if (TMSFNCWidgetMultiProgress1.CircleItems.Items[I].Value < 100) then
+    if TMSFNCWidgetMultiProgress1.CircleItems.Items[I].Value < 100 then
       TMSFNCWidgetMultiProgress1.CircleItems.Items[I].Value := UpdateProgress(TMSFNCWidgetMultiProgress1.CircleItems.Items[I].Value);
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
 begin
-  UpdateAll;
+  Self.UpdateAll;
 end;
 
 end.

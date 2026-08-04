@@ -42,6 +42,9 @@
         <Projects Include="DistributionIndicator\DistributionIndicator.dproj">
             <Dependencies/>
         </Projects>
+        <Projects Include="MultiProgress\MultiProgress.dproj">
+            <Dependencies/>
+        </Projects>
     </ItemGroup>
     <ProjectExtensions>
         <Borland.Personality>Default.Personality.12</Borland.Personality>
@@ -167,14 +170,23 @@
     <Target Name="DistributionIndicator:Make">
         <MSBuild Projects="DistributionIndicator\DistributionIndicator.dproj" Targets="Make"/>
     </Target>
+    <Target Name="MultiProgress">
+        <MSBuild Projects="MultiProgress\MultiProgress.dproj"/>
+    </Target>
+    <Target Name="MultiProgress:Clean">
+        <MSBuild Projects="MultiProgress\MultiProgress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MultiProgress:Make">
+        <MSBuild Projects="MultiProgress\MultiProgress.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="Arrow;WidgetDistributionIndicator;WidgetGauge;WidgetMarqueeProgress;WidgetMultiProgress;WidgetProgress;WidgetsSetPointAndLcdLabel;WidgetTrendIndicator;WidgetLEDBar;WidgetLEDScope;WidgetMatrixLabel;Progress;DistributionIndicator"/>
+        <CallTarget Targets="Arrow;WidgetDistributionIndicator;WidgetGauge;WidgetMarqueeProgress;WidgetMultiProgress;WidgetProgress;WidgetsSetPointAndLcdLabel;WidgetTrendIndicator;WidgetLEDBar;WidgetLEDScope;WidgetMatrixLabel;Progress;DistributionIndicator;MultiProgress"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="Arrow:Clean;WidgetDistributionIndicator:Clean;WidgetGauge:Clean;WidgetMarqueeProgress:Clean;WidgetMultiProgress:Clean;WidgetProgress:Clean;WidgetsSetPointAndLcdLabel:Clean;WidgetTrendIndicator:Clean;WidgetLEDBar:Clean;WidgetLEDScope:Clean;WidgetMatrixLabel:Clean;Progress:Clean;DistributionIndicator:Clean"/>
+        <CallTarget Targets="Arrow:Clean;WidgetDistributionIndicator:Clean;WidgetGauge:Clean;WidgetMarqueeProgress:Clean;WidgetMultiProgress:Clean;WidgetProgress:Clean;WidgetsSetPointAndLcdLabel:Clean;WidgetTrendIndicator:Clean;WidgetLEDBar:Clean;WidgetLEDScope:Clean;WidgetMatrixLabel:Clean;Progress:Clean;DistributionIndicator:Clean;MultiProgress:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="Arrow:Make;WidgetDistributionIndicator:Make;WidgetGauge:Make;WidgetMarqueeProgress:Make;WidgetMultiProgress:Make;WidgetProgress:Make;WidgetsSetPointAndLcdLabel:Make;WidgetTrendIndicator:Make;WidgetLEDBar:Make;WidgetLEDScope:Make;WidgetMatrixLabel:Make;Progress:Make;DistributionIndicator:Make"/>
+        <CallTarget Targets="Arrow:Make;WidgetDistributionIndicator:Make;WidgetGauge:Make;WidgetMarqueeProgress:Make;WidgetMultiProgress:Make;WidgetProgress:Make;WidgetsSetPointAndLcdLabel:Make;WidgetTrendIndicator:Make;WidgetLEDBar:Make;WidgetLEDScope:Make;WidgetMatrixLabel:Make;Progress:Make;DistributionIndicator:Make;MultiProgress:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
