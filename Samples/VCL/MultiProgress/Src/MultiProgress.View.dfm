@@ -25,7 +25,6 @@ object MultiProgressView: TMultiProgressView
     Padding.Right = 5
     Padding.Bottom = 5
     TabOrder = 0
-    ExplicitTop = -6
     DesignSize = (
       589
       40)
@@ -46,7 +45,6 @@ object MultiProgressView: TMultiProgressView
       Caption = 'Increment'
       TabOrder = 0
       OnClick = btnIncrementClick
-      ExplicitTop = 4
     end
     object cBoxLegendPosition: TComboBox
       Left = 432
@@ -76,8 +74,6 @@ object MultiProgressView: TMultiProgressView
       Caption = 'Clear'
       TabOrder = 2
       OnClick = btnClearClick
-      ExplicitLeft = 272
-      ExplicitTop = 8
     end
   end
   object MultiProgress: TTMSFNCWidgetMultiProgress
@@ -143,6 +139,5 @@ object MultiProgressView: TMultiProgressView
     ValueFont.Name = 'Segoe UI'
     ValueFont.Style = [fsBold]
     ValueFormat = '%g%%'
-    ExplicitTop = 41
   end
 end
