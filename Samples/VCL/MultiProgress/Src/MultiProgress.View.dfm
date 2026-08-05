@@ -53,9 +53,9 @@ object MultiProgressView: TMultiProgressView
       Height = 23
       Style = csDropDownList
       Anchors = [akTop, akRight]
-      ItemIndex = 1
+      ItemIndex = 3
       TabOrder = 1
-      Text = 'Top Left'
+      Text = 'Bottom Left'
       OnChange = cBoxLegendPositionChange
       Items.Strings = (
         'None'
@@ -81,32 +81,40 @@ object MultiProgressView: TMultiProgressView
     Top = 40
     Width = 589
     Height = 624
+    Margins.Left = 0
     Align = alClient
     ParentDoubleBuffered = False
+    Color = 1511693
     DoubleBuffered = True
     TabOrder = 1
     CircleOptions.Margin = 30
     CircleItems = <
       item
         Fill.Orientation = gfoVertical
+        Fill.ColorTo = clSilver
         Fill.TextureMode = gtmStretch
         UnfinishedFill.Orientation = gfoVertical
+        UnfinishedFill.Color = 1511693
         UnfinishedFill.TextureMode = gtmStretch
         Value = 50.000000000000000000
         Caption = 'Item 1'
       end
       item
         Fill.Orientation = gfoVertical
+        Fill.ColorTo = clSilver
         Fill.TextureMode = gtmStretch
         UnfinishedFill.Orientation = gfoVertical
+        UnfinishedFill.Color = 1511693
         UnfinishedFill.TextureMode = gtmStretch
         Value = 50.000000000000000000
         Caption = 'Item 2'
       end
       item
         Fill.Orientation = gfoVertical
+        Fill.ColorTo = clSilver
         Fill.TextureMode = gtmStretch
         UnfinishedFill.Orientation = gfoVertical
+        UnfinishedFill.Color = 1511693
         UnfinishedFill.TextureMode = gtmStretch
         Value = 50.000000000000000000
         Caption = 'Item 3'
@@ -116,10 +124,10 @@ object MultiProgressView: TMultiProgressView
     Legend.Font.Height = -16
     Legend.Font.Name = 'Segoe UI'
     Legend.Font.Style = []
-    Legend.Position = lpTopLeft
+    Legend.Position = lpBottomLeft
     Legend.Border.Kind = gskDash
     Legend.Border.Width = 1.000000000000000000
-    Legend.Margin = 15
+    Legend.Margin = 10
     Legend.Fill.Orientation = gfoVertical
     Legend.Fill.Color = 16510691
     Legend.Fill.TextureMode = gtmStretch
@@ -128,13 +136,13 @@ object MultiProgressView: TMultiProgressView
     Border.Width = 1.000000000000000000
     CaptionOptions.Text = 'Inscritos'
     CaptionOptions.Font.Charset = DEFAULT_CHARSET
-    CaptionOptions.Font.Color = clBlack
+    CaptionOptions.Font.Color = clWhite
     CaptionOptions.Font.Height = -19
     CaptionOptions.Font.Name = 'Segoe UI'
-    CaptionOptions.Font.Style = []
+    CaptionOptions.Font.Style = [fsBold]
     CaptionOptions.Position = cpTop
     ValueFont.Charset = ANSI_CHARSET
-    ValueFont.Color = clDarkslategray
+    ValueFont.Color = clWhite
     ValueFont.Height = -16
     ValueFont.Name = 'Segoe UI'
     ValueFont.Style = [fsBold]

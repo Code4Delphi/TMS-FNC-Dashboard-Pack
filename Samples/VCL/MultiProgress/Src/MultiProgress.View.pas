@@ -58,14 +58,17 @@ begin
   var LItem := MultiProgress.CircleItems.Add;
   LItem.Caption := 'Youtube';
   LItem.Value := Random(60);
+  LItem.UnfinishedFill.Color := $0017110D;
 
   LItem := MultiProgress.CircleItems.Add;
   LItem.Caption := 'Instagram';
   LItem.Value := Random(60);
+  LItem.UnfinishedFill.Color := $0017110D;
 
   LItem := MultiProgress.CircleItems.Add;
   LItem.Caption := 'LinkedIn';
   LItem.Value := Random(60);
+  LItem.UnfinishedFill.Color := $0017110D;
 end;
 
 procedure TMultiProgressView.btnIncrementClick(Sender: TObject);
