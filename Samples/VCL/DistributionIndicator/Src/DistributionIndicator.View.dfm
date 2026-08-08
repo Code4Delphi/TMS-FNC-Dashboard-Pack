@@ -110,7 +110,6 @@ object DistributionIndicatorView: TDistributionIndicatorView
     Funnel.WidthTop = 0.600000023841857900
     Funnel.WidthBottom = 0.330000013113021900
     Funnel.Gap = 0.019999999552965160
-    ExplicitTop = 36
   end
   object Panel1: TPanel
     Left = 0
