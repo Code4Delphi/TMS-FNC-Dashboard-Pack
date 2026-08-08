@@ -20,6 +20,7 @@ Este repositório reúne exemplos práticos de utilização dos componentes do T
 - [Indicadores de Progresso no Delphi | Dashboards | #Short #016](https://youtube.com/shorts/x0WD8cVS8Kw)
 - [Dashboard com Gráficos usando Banco de Dados no Delphi | #delphi #tmssoftware | #018](https://www.youtube.com/shorts/CPJih0uh1z8)
 - [Multi Progress no Delphi para Dashboards Modernos | #019](https://www.youtube.com/shorts/v4DbT7dQnTY)
+- [Setas Dinâmicas para Dashboards no Delphi com o TMS Widget Arrow | #020](https://youtube.com/shorts/v2P6iWisRGM?feature=share)
 
 <br>
 
