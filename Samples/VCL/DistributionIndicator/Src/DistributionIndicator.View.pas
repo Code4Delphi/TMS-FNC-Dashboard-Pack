@@ -83,6 +83,7 @@ const
 
 procedure TDistributionIndicatorView.FormCreate(Sender: TObject);
 begin
+  FDConnection1.Params.Database := '..\Data\code4delphi.db';
   DistributionIndicator1.Header.Text := 'Vendas mensais';
   Self.CarregarDados;
 end;

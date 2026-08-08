@@ -20,7 +20,7 @@ type
   private
     procedure FillRandom;
   public
-    { Public declarations }
+
   end;
 
 var
@@ -53,7 +53,6 @@ begin
     TMSFNCWidgetTrendIndicator1.Values.EndUpdate;
   end;
 end;
-
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
