@@ -24,12 +24,10 @@ uses
 type
   TArrowView = class(TForm)
     Panel2: TPanel;
-    Label1: TLabel;
-    btnFill: TButton;
-    cBoxGraphType: TComboBox;
+    btnIncrementValue: TButton;
     TMSFNCWidgetArrow1: TTMSFNCWidgetArrow;
     procedure FormCreate(Sender: TObject);
-    procedure btnFillClick(Sender: TObject);
+    procedure btnIncrementValueClick(Sender: TObject);
   private
     procedure ConfigComponente;
   public
@@ -60,7 +58,7 @@ begin
   TMSFNCWidgetArrow1.ValueText := 'Aguardando';
 end;
 
-procedure TArrowView.btnFillClick(Sender: TObject);
+procedure TArrowView.btnIncrementValueClick(Sender: TObject);
 begin
   TMSFNCWidgetArrow1.Value := TMSFNCWidgetArrow1.Value + 30;
   TMSFNCWidgetArrow1.ValueText := Format('Procesando %d%', [TMSFNCWidgetArrow1.Value]);

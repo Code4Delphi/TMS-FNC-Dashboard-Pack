@@ -24,40 +24,15 @@ object ArrowView: TArrowView
     Padding.Right = 5
     Padding.Bottom = 5
     TabOrder = 0
-    DesignSize = (
-      589
-      40)
-    object Label1: TLabel
-      Left = 336
-      Top = 14
-      Width = 91
-      Height = 15
-      Alignment = taRightJustify
-      Caption = 'Legend Position: '
-    end
-    object btnFill: TButton
+    object btnIncrementValue: TButton
       Left = 8
       Top = 5
       Width = 169
       Height = 30
       Align = alLeft
-      Caption = 'Fill with database'
+      Caption = 'Incremente Value'
       TabOrder = 0
-      OnClick = btnFillClick
-    end
-    object cBoxGraphType: TComboBox
-      Left = 432
-      Top = 11
-      Width = 145
-      Height = 23
-      Style = csDropDownList
-      Anchors = [akTop, akRight]
-      ItemIndex = 0
-      TabOrder = 1
-      Text = 'Line'
-      Items.Strings = (
-        'Line'
-        'Bar')
+      OnClick = btnIncrementValueClick
     end
   end
   object TMSFNCWidgetArrow1: TTMSFNCWidgetArrow
@@ -73,6 +48,7 @@ object ArrowView: TArrowView
     ArrowOptions.Border.Width = 1.000000000000000000
     Border.Color = clDimgray
     Border.Width = 1.000000000000000000
+    CaptionOptions.Text = 'Processando ...'
     CaptionOptions.Font.Charset = DEFAULT_CHARSET
     CaptionOptions.Font.Color = clGray
     CaptionOptions.Font.Height = -19
@@ -84,5 +60,6 @@ object ArrowView: TArrowView
     ValueFont.Name = 'Segoe UI'
     ValueFont.Style = []
     ValueText = '%g'
+    ExplicitTop = 41
   end
 end
